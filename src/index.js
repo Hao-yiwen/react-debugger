@@ -7,7 +7,10 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div>
+      <span>test</span>
+      <App />
+    </div>
   </React.StrictMode>
 );
 
@@ -15,3 +18,9 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// 获取根节点的 Fiber 对象
+// const rootFiber = document.getElementById('root')._reactRootContainer._internalRoot.current;
+setTimeout(() => {
+  console.log(root); // 打印 Fiber 树的根节点
+}, 1000);
